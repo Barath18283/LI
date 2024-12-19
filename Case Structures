@@ -1,0 +1,12 @@
+#!/bin/bash 
+echo -n "Enter Number between 0 and 9: " 
+read n 
+case $n in 
+    0)      echo 'You typed 0.';; 
+    1|9)    echo "$n is a perfect square.";; 
+    3|5|7)  echo "$n is a prime number.";; 
+    4)      echo "$n is a perfect square. 
+                  $n is an even number";; 
+    2|6|8)  echo "$n is an even number.";; 
+    *)      echo 'Only single-digit numbers are allowed.';; 
+esac
