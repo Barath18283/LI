@@ -1,0 +1,27 @@
+#!/bin/bash 
+fact() 
+{ 
+i=1 
+a=1 
+while [ $i -le $x ] 
+do 
+  a=`expr $a \* $i` 
+  i=`expr $i + 1` 
+done 
+} 
+echo “Enter the N value:” 
+read n 
+echo “Enter the R value:” 
+read r 
+x=$n 
+fact 
+nf=$a 
+x=$r 
+fact 
+rf=$a 
+x=`expr $n - $r` 
+fact 
+nrf=$a 
+res=`expr $rf \* $nrf` 
+res=`expr $nf / $res` 
+echo “the combination of $n C $r is $res.”
